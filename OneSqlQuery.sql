@@ -7,6 +7,7 @@
 USE Northwind
 GO
 /*
+  ***Tamamlanmış Olan Konular***
   --1. Opertörler
   --2. SELECT ve Operatörlerin Kullanımı
   --3. LIKE Kullanımı
@@ -39,7 +40,22 @@ GO
   --30. FIRST_VALUE() Kullanımı
   --31. LAST_VALUE() Kullanımı
   --32. LEAD() Kullanımı
-  --33. LAG() Kullanımı
+  --33. LAG() Kullanımı    
+  --34. Veritabanı İşlemleri
+  --35. Tablo İşlemleri
+  --36. VIEW Kullanımı
+  --37. ANY, ALL Kullanımı
+  --38. UNION Kullanımı
+  --39. Select Into Kullanımı | Tablo Kopyalama
+  --40. Insert Into Select Kullanımı | SQL'de Aynı Tablo İçerisindeki Verileri Yeniden Ekleme
+  --41. TEMP Tablo Oluşturma
+  --42. Kullanıcı İşlemleri
+  --43. Transaction Kullanımı
+  --44. SCHEMA Kullanımı
+  --45. Sequence Kullanımı
+  --46. OFFSET FETCH Kullanımı
+  --47. Procedure Kullanımı
+  --48. NTILE Kullanımı
   */
 
 BEGIN--Operatörler
@@ -2003,5 +2019,3 @@ BEGIN--NTILE Kullanımı
   FROM dbo.Products
   GROUP BY CategoryID
 END
-
-
