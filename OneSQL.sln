@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{92DF2403-B5F3-4B57-AA02-FB5F8AB0E515}"
+	ProjectSection(SolutionItems) = preProject
+		OneSqlQuery.sql = OneSqlQuery.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {67BB4956-6AB1-40D4-8D29-DBD98E9C32C6}
+	EndGlobalSection
+EndGlobal
