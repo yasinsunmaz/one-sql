@@ -1,7 +1,7 @@
 ﻿/*
   Tüm sorgular Northwind veri tabanı üzerinden kullanılarak hazırlanmıştır. Eksik konular eklenecektir.
   Website: www.yasinsunmaz.com
-  Veri tabanı indirme linki: www.yasinsunmaz.com
+  Veri tabanı indirme linki: https://www.yasinsunmaz.com/sql-server-output-kullanimi-eklenen-ve-duzenlenen-kaydin-bilgilerini-geriye-dondurme.html
   Yazar: yasinsunmaz
 */
 USE Northwind
