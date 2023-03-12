@@ -381,7 +381,7 @@ BEGIN--SQL Metinsel Fonksiyonlar ve İşlemler
    ,REPLACE(e.FirstName, 'an', 'AN') AS arBarindiranAdlar
   FROM Employees AS e
 
-  --REPLICATE() Kullanımı | Bir karakteri belirli sayıda  tekrar ettirmek için kullanılır.
+  --REPLICATE() Kullanımı | Bir karakteri belirli sayıda tekrar ettirmek için kullanılır.
   SELECT
     REPLICATE('+', 10) AS TekrarEttirilenAlan
 
@@ -414,7 +414,7 @@ BEGIN--SQL Metinsel Fonksiyonlar ve İşlemler
    ,LEN(e.FirstName) AS AdUzunlugu
   FROM Employees AS e
 
-  --DATALENGTH() Kullanımı | Bir ifadenin uzunluğunu bay cinsinden döndürür.
+  --DATALENGTH() Kullanımı | Bir ifadenin uzunluğunu bayt cinsinden döndürür.
   SELECT
     e.FirstName
    ,DATALENGTH(e.FirstName) AS BaytUzunluk
@@ -889,47 +889,8 @@ BEGIN--CURSOR Kullanımı
   END
   --İşlem bitince cursorü kapatıyoruz
   CLOSE UnitPriceAdd
-  DEALLOCATE UnitPriceAdd
+  DEALLOCATE UnitPriceAdd  
 
-  DECLARE @Name NVARCHAR(MAX)
-  DECLARE @lookupId INT = 3500;
-  DECLARE LookupAdd CURSOR FOR SELECT
-    mq.NAME
-  FROM eaf.MODUL_QUERY mq
-  OPEN LookupAdd
-  FETCH NEXT FROM LookupAdd INTO @Name
-  WHILE @@FETCH_STATUS = 0
-  BEGIN
-  SET IDENTITY_INSERT ESL.LOOKUP_LIST_ITEM_TB ON
-  INSERT INTO ESL.LOOKUP_LIST_ITEM_TB (ID, LOOKUP_LIST_ID, PARENT_ID, NAME, CODE, ENABLED)
-    VALUES (@lookupId, 35, NULL, @Name, NULL, CONVERT(BIT, 'True'))
-  SET IDENTITY_INSERT ESL.LOOKUP_LIST_ITEM_TB OFF
-  SET @lookupId = @lookupId + 1
-  FETCH NEXT FROM LookupAdd INTO @Name
-  END
-  CLOSE LookupAdd
-  DEALLOCATE LookupAdd
-
-  -->Belli kayıtları toplu güncelleme (TC Numarasını Güncelleme)
-  DECLARE @ID INT;
-  DECLARE @identityNo BIGINT = 10000000001;
-
-  DECLARE IDENTITYNO_ADD CURSOR FOR SELECT
-    p.ID
-  FROM ESL.PERSON p
-  OPEN IDENTITYNO_ADD
-  FETCH NEXT FROM IDENTITYNO_ADD INTO @ID
-  WHILE @@FETCH_STATUS = 0
-  BEGIN
-  UPDATE ESL.PERSON
-  SET IDENTITY_NO = CONVERT(NVARCHAR(64), @identityNo)
-  WHERE ID = @ID
-
-  SET @identityNo = @identityNo + 1
-  FETCH NEXT FROM IDENTITYNO_ADD INTO @ID
-  END
-  CLOSE IDENTITYNO_ADD
-  DEALLOCATE IDENTITYNO_ADD
 END
 
 BEGIN--INSERT Kayıt Ekleme
