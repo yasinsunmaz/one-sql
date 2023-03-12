@@ -56,6 +56,7 @@ GO
   --46. OFFSET FETCH Kullanımı
   --47. Procedure Kullanımı
   --48. NTILE Kullanımı
+  --49. PIVOT Kullanımı
   */
 
 BEGIN--Operatörler
@@ -1832,6 +1833,27 @@ BEGIN--MERGE Kullanımı --> Detaylar eklenecek
 END
 
 BEGIN--PIVOT Kullanımı
+  --Tablolarda belli sonuçları daha düzgün bir şekilde gösterebilmek için kullanılır. Satır şekilde olan verileri sütun şekilde dönüştürebilir.
+  --PIVOT tabloya bir ad verilmek zorundadır.
+
+SELECT * FROM Products
+  --Mevcut kategoriye göre ürün sayısı
+  SELECT CategoryID, COUNT(*) ProductID FROM Products     
+    GROUP BY CategoryID
+
+  --Kategorileri yan yana olacak şekilde ürün sayısını gösterme
+  SELECT * FROM
+  (
+    SELECT CategoryID, COUNT(*) ProductName FROM Products     
+    GROUP BY CategoryID
+  ) KategoriyeGoreUrunler
+  PIVOT
+  (
+    SUM(ProductName) FOR CategoryID IN([1],[5])
+  ) PivotTableName
+END
+
+BEGIN--UNPIVOT Kullanımı
 
 END
 
