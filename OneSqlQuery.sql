@@ -57,9 +57,10 @@ GO
   --47. Procedure Kullanımı
   --48. NTILE Kullanımı
   --49. PIVOT Kullanımı
+  --50. Function Kullanımı
   */
 
-BEGIN--Operatörler
+--Operatörler
 /*
 =	Eşit
 <>	Eşit Değil. "!=" kullanılabilir.
@@ -75,7 +76,7 @@ AND Ve
 OR Veya
 */
 --Operatörler Bitiş
-END
+
 
 BEGIN--SELECT ve Operatörlerin Kullanımı
   --Veri çekme, listleme ve fonksiyon gibi bir çok işlemleri çalıştırmak için kullanılır.
@@ -1762,7 +1763,7 @@ BEGIN--OFFSET FETCH Kullanımı
 END
 
 BEGIN--Tekrar Eden Kayıtları Silme
-
+    SELECT * FROM Eklenecek
 END
 
 BEGIN--ROLLUP Kullanımı
@@ -1789,7 +1790,7 @@ BEGIN--ROLLUP Kullanımı
 END
 
 BEGIN--CUBE Kullanımı
-
+    SELECT * FROM Eklenecek
 END
 
 BEGIN--MERGE Kullanımı --> Detaylar eklenecek
@@ -1854,51 +1855,51 @@ SELECT * FROM Products
 END
 
 BEGIN--UNPIVOT Kullanımı
-
+    SELECT * FROM Eklenecek    
 END
 
 BEGIN--INNER JOIN Kullanımı
-
+    SELECT * FROM Eklenecek
 END
 
 BEGIN--LEFT JOIN Kullanımı
-
+    SELECT * FROM Eklenecek
 END
 
 BEGIN--RIGHT JOIN Kullanımı
-
+    SELECT * FROM Eklenecek
 END
 
 BEGIN--FULL JOIN Kullanımı
-
+    SELECT * FROM Eklenecek
 END
 
 BEGIN--OUTER JOIN Kullanımı
-
+    SELECT * FROM Eklenecek
 END
 
 BEGIN--FULL OUTER JOIN Kullanımı
-
+    SELECT * FROM Eklenecek
 END
 
 BEGIN--SELF JOIN Kullanımı
-
+    SELECT * FROM Eklenecek
 END
 
 BEGIN--CROSS JOIN Kullanımı
-
+    SELECT * FROM Eklenecek
 END
 
 BEGIN--OUTER APPLY Kullanımı
-
+    SELECT * FROM Eklenecek
 END
 
 BEGIN--SUBQUERY Kullanımı | Alt Sorgular
-
+    SELECT * FROM Eklenecek
 END
 
 BEGIN--Trigger Kullanımı
-
+    SELECT * FROM Eklenecek
 END
 
 BEGIN--Function Kullanımı | Detaylar eklenecek
