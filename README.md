@@ -5,9 +5,9 @@
 # It is a document where you can find all SQL commands. You can write SQL quickly with examples.
 
 # Konular / Topics
-  - 1. Opertörler
-  - 2. SELECT ve Operatörlerin Kullanımı
-  - 3. LIKE Kullanımı
+1. Opertörler
+2. SELECT ve Operatörlerin Kullanımı
+- 3. LIKE Kullanımı
   --4. SQL Komutları
   --5. SQL Sayısal Fonksiyonlar ve İşlemler
   --6. SQL Metinsel Fonksiyonlar ve İşlemler
